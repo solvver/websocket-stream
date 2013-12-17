@@ -96,8 +96,6 @@ WebsocketStream.prototype._write = function(data, encoding, callback) {
 }
 WebsocketStream.prototype.doWrite=function(data){
     var self=this;
-    setImmediate(function(){
-        self.ws.send(data, {binary: false});
-    })
+    self.ws.send(data, {binary: false});
 }
 
