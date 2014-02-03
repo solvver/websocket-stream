@@ -99,3 +99,7 @@ WebsocketStream.prototype.doWrite=function(data){
     self.ws.send(data, {binary: false});
 }
 
+WebsocketStream.prototype._read = function(n){
+
+}
+
